@@ -1,6 +1,7 @@
 package com.zemanta.client;
 
 import com.zemanta.client.utils.Utils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

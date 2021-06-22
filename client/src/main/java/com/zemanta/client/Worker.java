@@ -19,7 +19,7 @@ class Worker implements Runnable {
 
     public Worker(int id) {
         this.id = id;
-        url = URL+id;
+        url = URL + id;
     }
 
     private void sendGet() throws Exception {

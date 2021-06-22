@@ -26,10 +26,9 @@ public class EmptyCache implements Runnable {
                     }
 
                     Iterator<Integer> it = queue.keySet().iterator();
-                    while (it.hasNext())
-                    {
+                    while (it.hasNext()) {
                         BlockingQueue<Long> blockingQueue = queue.get(it.next());
-                        if (blockingQueue.size()==0)
+                        if (blockingQueue.size() == 0)
                             it.remove();
                     }
                 }
