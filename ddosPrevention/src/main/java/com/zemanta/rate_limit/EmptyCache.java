@@ -15,13 +15,10 @@ public class EmptyCache implements Runnable {
 
     public void run() {
         while (true) {
-            System.out.println("Brisalec na delu");
             try {
                 synchronized (queue) {
                     for (Integer clientId : queue.keySet()) {
                         BlockingQueue<Long> blockingQueue = queue.get(clientId);
-
-                        System.out.println("Emptying queue size:" + blockingQueue.size());
                         queue.put(clientId, Utils.pollingElapsedElements(blockingQueue));
                     }
 
